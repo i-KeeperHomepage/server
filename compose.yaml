@@ -1,0 +1,11 @@
+services:
+  homepage-front-end:
+    build:
+      context: ./front_end
+      network: host
+    container_name: homepage-front-end
+    environment:
+      - TZ=Asia/Seoul
+    ports:
+      - "127.0.0.1:17076:80"
+    restart: unless-stopped
